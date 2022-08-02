@@ -17,61 +17,21 @@
   </head>
   <body data-new-gr-c-s-check-loaded="14.1001.0" data-gr-ext-installed="">
     <section class="page-header">
-    <!-- <h1 class="project-name">Demo PAGE</h1> -->
-    <!-- <h2 class="project-tagline"></h2> -->
-      
       
     </section>
 
 <section class="main-content">
     <h1 id=""><center>AccentSpeech: Learning Accent from Crowd-sourced Data for Target Speaker TTS with Accents</center></h1>
-    <center> Yongmao Zhang<sup>1</sup>, Zhichao Wang<sup>1</sup>, Peiji Yang<sup>2</sup>, Hongshen Sun<sup>2</sup>,  Zhisheng Wang<sup>2</sup>, Lei Xie<sup>1</sup> </center>
+    <!-- <center> Yongmao Zhang<sup>1</sup>, Zhichao Wang<sup>1</sup>, Peiji Yang<sup>2</sup>, Hongshen Sun<sup>2</sup>,  Zhisheng Wang<sup>2</sup>, Lei Xie<sup>1</sup> </center>
     <center> <sup>1</sup> Audio, Speech and Language Processing Group (ASLP@NPU), School of Computer Science, Northwestern Polytechnical University, Xi'an, China</center>
-    <center> <sup>2</sup> Tencent, Shenzhen, China</center>
+    <center> <sup>2</sup> Tencent, Shenzhen, China</center> -->
 
-<!-- <h2>Contents</h2>
-<ul>
-  <li><a href="#abstract">Abstract</a></li>
-  <li><a href="#system">System Description</a></li>
-  <li><a href="#comparison">Demos -- Comparison Analysis</a></li>
-  <ul>
-      <li><a href="#cmu">CMU testset results</a></li>
-		  <li><a href="#esd">ESD testset results(style transfer)</a></li>
-  </ul>
-  <li><a href="#ablation">Demos -- Ablation Analysis</a></li>
-  <li><a href="#duration">Demos & Visualization -- Varying Duration</a></li>
-  <li><a href="#visual">Demos & Visualization -- Over-fitting on Spectrograms</a></li>
-</ul> -->
 
 <h2 id="abstract">1. Abstract<a name="abstract"></a></h2>
 <p>The decoupling of accent and timbre aims at transferring an accent to the voice synthesized in the target speaker's voice. Most previous accent timbre decoupling systems rely on high-quality accent data. This paper proposes AccentSpeech, a method to learn accents from low-quality accent data and transfer accents to the target speaker. There may be two problems when using low-quality accent data: background noise and poor prosody. We use the PPG extracted from the end-to-end ASR model as the intermediate feature to reduce the impact of background noise. We use parallel data augmentation to avoid learning poor prosody from the low-quality accent data. To decouple accent and timbre, we use a separate model to model accent and timbre, respectively. Experiments show that AccentSpeech is better than Hieratron in constructing an accent timbre decoupling speech synthesis system using low-quality accent data. </p>
 	<center><img src='fig/model.png' width=500px></center>
 <br><br>
 
-<!-- <h2>2. System Description<a name="system"></a></h2>
-<blockquote>
-Comparison Systems
-<ul>
-<li>AGAINVC</li>
-<li>VQMIVC</li>
-<li>GSE</li>
-<li>GSE-finetune</li>
-</ul>
-Ablation Systems
-<ul>
-  <li>BL: baseline system. BL is composed of speaker and conversion module to convert BN to mel spectrum</li>
-  <li>P1: P1 uses speaker normalization based on BL</li>
-  <li>P2: P2 adopts weight regularization based P1</li>
-  <li>P3: the final system we proposed. P3 uses prosody module based on P2</li>
-  </ul>
-Speaker & Reference Audio
-    <ul>
-    <li>Source speakers: clb, rms, ESD speakers</li>
-    <li>Target speakers: bdl, slt, p340, p363</li>
-    <li>Reference utterance: bdl (arctic_a0001), slt (arctic_a0001), p340 (p340_003), p363 (p363_003)</ul>
-    </ul>
-  <table>
-</blockquote> -->
 
 <h2>2. Dataset<a name="dataset"></a></h2>
 
@@ -178,58 +138,58 @@ Speaker & Reference Audio
 
 <p> City: ChengDu-成都 </p>
 
-1、Text：那些庄稼田园在果果眼里感觉太亲切了
+1、Text：那些庄稼田园在果果眼里感觉太亲切了<br />
 
-Basreline: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/base/baseline/000001_chengdu.wav"></audio>  AccentSpeech: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/proposed/000001_chengdu.wav"></audio>
+Basreline: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/base/baseline/000001_chengdu.wav"></audio>  AccentSpeech: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/proposed/000001_chengdu.wav"></audio><br />
 
-2、Text：她把鞋子拎在手上光着脚丫故意踩在水洼里
+2、Text：她把鞋子拎在手上光着脚丫故意踩在水洼里<br />
 
-Basreline: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/base/baseline/000002_chengdu.wav"></audio>  AccentSpeech: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/proposed/000002_chengdu.wav"></audio>
+Basreline: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/base/baseline/000002_chengdu.wav"></audio>  AccentSpeech: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/proposed/000002_chengdu.wav"></audio><br />
 
-3、Text：如大堂东有海蚀穴二层，穴顶呈弧形，表面多蜂窝状浪花风化而成的小圆穴
+3、Text：如大堂东有海蚀穴二层，穴顶呈弧形，表面多蜂窝状浪花风化而成的小圆穴<br />
 
-Basreline: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/base/baseline/030971_chengdu.wav"></audio>  AccentSpeech: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/proposed/030971_chengdu.wav"></audio>
+Basreline: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/base/baseline/030971_chengdu.wav"></audio>  AccentSpeech: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/proposed/030971_chengdu.wav"></audio><br />
 
-4、Text：分水岭把水流分成两个水系，西入四川盆地的内陆湖，东入湖北宜昌附近的湖泊
+4、Text：分水岭把水流分成两个水系，西入四川盆地的内陆湖，东入湖北宜昌附近的湖泊<br />
 
-Basreline: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/base/baseline/030972_chengdu.wav"></audio>  AccentSpeech: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/proposed/030972_chengdu.wav"></audio>
+Basreline: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/base/baseline/030972_chengdu.wav"></audio>  AccentSpeech: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/proposed/030972_chengdu.wav"></audio><br />
 
 <p> City: XiAn-西安 </p>
 
-1、Text：那些庄稼田园在果果眼里感觉太亲切了
+1、Text：那些庄稼田园在果果眼里感觉太亲切了<br />
 
-Basreline: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/base/baseline/000001_xian.wav"></audio>  AccentSpeech: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/proposed/000001_xian.wav"></audio>
+Basreline: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/base/baseline/000001_xian.wav"></audio>  AccentSpeech: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/proposed/000001_xian.wav"></audio><br />
 
-2、Text：她把鞋子拎在手上光着脚丫故意踩在水洼里
+2、Text：她把鞋子拎在手上光着脚丫故意踩在水洼里<br />
 
-Basreline: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/base/baseline/000002_xian.wav"></audio>  AccentSpeech: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/proposed/000002_xian.wav"></audio>
+Basreline: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/base/baseline/000002_xian.wav"></audio>  AccentSpeech: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/proposed/000002_xian.wav"></audio><br />
 
-3、Text：如大堂东有海蚀穴二层，穴顶呈弧形，表面多蜂窝状浪花风化而成的小圆穴
+3、Text：如大堂东有海蚀穴二层，穴顶呈弧形，表面多蜂窝状浪花风化而成的小圆穴<br />
 
-Basreline: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/base/baseline/030971_xian.wav"></audio>  AccentSpeech: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/proposed/030971_xian.wav"></audio>
+Basreline: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/base/baseline/030971_xian.wav"></audio>  AccentSpeech: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/proposed/030971_xian.wav"></audio><br />
 
-4、Text：分水岭把水流分成两个水系，西入四川盆地的内陆湖，东入湖北宜昌附近的湖泊
+4、Text：分水岭把水流分成两个水系，西入四川盆地的内陆湖，东入湖北宜昌附近的湖泊<br />
 
-Basreline: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/base/baseline/030972_xian.wav"></audio>  AccentSpeech: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/proposed/030972_xian.wav"></audio>
+Basreline: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/base/baseline/030972_xian.wav"></audio>  AccentSpeech: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/proposed/030972_xian.wav"></audio><br />
 
 
 <p> City: Zhengzhou-郑州 </p>
 
-1、Text：那些庄稼田园在果果眼里感觉太亲切了
+1、Text：那些庄稼田园在果果眼里感觉太亲切了<br />
 
-Basreline: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/base/baseline/000001_zhengzhou.wav"></audio>  AccentSpeech: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/proposed/000001_zhengzhou.wav"></audio>
+Basreline: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/base/baseline/000001_zhengzhou.wav"></audio>  AccentSpeech: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/proposed/000001_zhengzhou.wav"></audio><br />
 
-2、Text：她把鞋子拎在手上光着脚丫故意踩在水洼里
+2、Text：她把鞋子拎在手上光着脚丫故意踩在水洼里<br />
 
-Basreline: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/base/baseline/000002_zhengzhou.wav"></audio>  AccentSpeech: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/proposed/000002_zhengzhou.wav"></audio>
+Basreline: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/base/baseline/000002_zhengzhou.wav"></audio>  AccentSpeech: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/proposed/000002_zhengzhou.wav"></audio><br />
 
-3、Text：如大堂东有海蚀穴二层，穴顶呈弧形，表面多蜂窝状浪花风化而成的小圆穴
+3、Text：如大堂东有海蚀穴二层，穴顶呈弧形，表面多蜂窝状浪花风化而成的小圆穴<br />
 
-Basreline: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/base/baseline/030971_zhengzhou.wav"></audio>  AccentSpeech: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/proposed/030971_zhengzhou.wav"></audio>
+Basreline: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/base/baseline/030971_zhengzhou.wav"></audio>  AccentSpeech: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/proposed/030971_zhengzhou.wav"></audio><br />
 
-4、Text：分水岭把水流分成两个水系，西入四川盆地的内陆湖，东入湖北宜昌附近的湖泊
+4、Text：分水岭把水流分成两个水系，西入四川盆地的内陆湖，东入湖北宜昌附近的湖泊<br />
 
-Basreline: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/base/baseline/030972_zhengzhou.wav"></audio>  AccentSpeech: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/proposed/030972_zhengzhou.wav"></audio>
+Basreline: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/base/baseline/030972_zhengzhou.wav"></audio>  AccentSpeech: <audio style="width: 150px;" controls="" preload="none" src="sample/demo/proposed/030972_zhengzhou.wav"></audio><br />
 
 <!-- 
 <table>
